@@ -136,6 +136,7 @@ export default class SpectrogramFFTPlugin extends BasePlugin<BasePluginEvents & 
     }
 
     public destroy(): void {
+        this.unAll()
         this.canvas.remove()
         this.wrapper.remove()
         this.container?.remove()
